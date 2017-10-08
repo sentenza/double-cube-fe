@@ -1,5 +1,3 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
 # compiled output
 /dist
 /tmp
@@ -23,6 +21,24 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# IDE - Netbeans
+/nbproject/*    
+/nbproject/private/
+
+# Vim specific ---
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+._*
+*.swp
+*.swo
+
+# Temporary
+.netrwhist
+*~
 
 # misc
 /.sass-cache
