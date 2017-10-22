@@ -15,11 +15,16 @@ export class ThreeModelsComponent implements OnInit{
   constructor(private tdService: ThreeModelsService) { }
 
   ngOnInit(): void {
-    this.tdService.getModels().then(promised => this.models = promised);
+    this.tdService.getModels().then(_ => this.onReceive(_));
   }
 
   onSelect(selected: ThreeModel): void {
     this.selectedModel = selected;
+  }
+
+  private onReceive(data: ThreeModel[]): void {
+      console.log('%o', data);
+      this.models = data
   }
 }
 
