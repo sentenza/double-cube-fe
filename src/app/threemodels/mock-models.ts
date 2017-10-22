@@ -1,6 +1,6 @@
-import { ThreeDModel } from './threedmodel';
+import { ThreeModel } from './threemodel';
 
-export const MODELS: ThreeDModel[] = [
+export const MODELS: ThreeModel[] = [
     { id: 1, name: 'Fibonacci' },
     { id: 2, name: 'Couchy' },
     { id: 3, name: 'Laplace' },

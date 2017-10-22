@@ -1,4 +1,4 @@
-export class ThreeDModel {
+export class ThreeModel {
   id: number;
   name: string;
 }

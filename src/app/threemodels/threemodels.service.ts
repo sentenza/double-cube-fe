@@ -1,12 +1,12 @@
-import { ThreeDModel } from './threedmodel';
 import { Injectable } from '@angular/core';
+import { ThreeModel } from './threemodel';
 import { MODELS } from './mock-models';
 
 @Injectable()
-export class ThreeDService {
+export class ThreeModelsService {
   mockedModels = MODELS;
 
-  getModels(): Promise<ThreeDModel[]> {
+  getModels(): Promise<ThreeModel[]> {
     return Promise.resolve(this.mockedModels);
   }
 
