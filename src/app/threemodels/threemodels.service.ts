@@ -12,7 +12,11 @@ export class ThreeModelsService {
 
  constructor(private http: Http) { }
 
- getModels(): Promise<ThreeModel[]> {
+ public getStaticModels(): ThreeModel[] {
+   return MODELS;
+ }
+
+ getModelsViaHTTP(): Promise<ThreeModel[]> {
    // return Promise.resolve(this.mockedModels);
    return this.http.get(this.modelsUrl)
               .toPromise()
@@ -21,7 +25,7 @@ export class ThreeModelsService {
  }
 
  private handleError(error: any): Promise<any> {
-   console.error('An error occurred', error); // for demo purposes only
+   console.error('An error occurred %o', error); // for demo purposes only
    return Promise.reject(error.message || error);
  }
 

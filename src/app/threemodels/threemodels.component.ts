@@ -5,17 +5,18 @@ import { ThreeModelsService } from './threemodels.service';
 @Component({
   selector: 'app-three-models',
   templateUrl: './threemodels.component.html',
-  styleUrls: ['./threemodels.component.css'],
+  styleUrls: ['./threemodels.component.scss'],
   providers: [ ThreeModelsService ]
 })
-export class ThreeModelsComponent implements OnInit{
+export class ThreeModelsComponent implements OnInit {
   models: ThreeModel[];
   selectedModel: ThreeModel;
 
   constructor(private tdService: ThreeModelsService) { }
 
   ngOnInit(): void {
-    this.tdService.getModels().then(_ => this.onReceive(_));
+    // this.tdService.getModelsViaHTTP().then(_ => this.onReceive(_));
+    this.models = this.tdService.getStaticModels();
   }
 
   onSelect(selected: ThreeModel): void {
@@ -23,8 +24,7 @@ export class ThreeModelsComponent implements OnInit{
   }
 
   private onReceive(data: ThreeModel[]): void {
-      console.log('%o', data);
-      this.models = data
+      this.models = data;
   }
 }
 

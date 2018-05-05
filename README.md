@@ -1,8 +1,4 @@
-# Double Cube
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
-
-# About _Double Cube_
+# _Double Cube_
 
 _Double Cube_ will be a web-based 3D model catalogue. The essential goal of this application is to give the end users the ability to upload, modify and explore a catalogue of JSON 3D models using WebGL.
 
