@@ -3,7 +3,7 @@ import { ThreeModel } from './threemodel';
 import { MODELS } from './mock-models';
 import { Headers, Http } from '@angular/http';
 
-import 'rxjs/add/operator/toPromise';
+// import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class ThreeModelsService {
