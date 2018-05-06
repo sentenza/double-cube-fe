@@ -7,13 +7,15 @@ import { ThreeModelsComponent } from './threemodels/threemodels.component';
 import { SceneComponent } from './scene/scene.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
+import { CubeComponent } from './cube/cube.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ThreeModelsComponent,
     SceneComponent,
-    HeaderComponent
+    HeaderComponent,
+    CubeComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,8 @@ import { HeaderComponent } from './header/header.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

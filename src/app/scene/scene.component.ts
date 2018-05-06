@@ -7,7 +7,8 @@ import * as THREE from 'three';
   styleUrls: ['./scene.component.scss']
 })
 export class SceneComponent implements OnInit, AfterViewInit {
-  @ViewChild('rendererContainer') rendererContainer: ElementRef;
+  @ViewChild('rendererContainer')
+  private rendererContainer: ElementRef;
   private renderer = new THREE.WebGLRenderer();
   private scene: THREE.Scene = null;
   private camera: THREE.Camera = null;
@@ -25,8 +26,7 @@ export class SceneComponent implements OnInit, AfterViewInit {
     this.scene.add(this.mesh);
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   ngAfterViewInit(): void {
     this.renderer.setSize(500, 380);
