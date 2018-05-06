@@ -78,7 +78,8 @@ export class CubeComponent implements OnInit, AfterViewInit {
    */
   private loadRubixMaterials(): void {
     const texturesPath = '../../assets/textures/';
-    const rubikTextures = texturesPath + 'rubik/';
+    // const rubikTextures = texturesPath + 'rubik/';
+    const rubikTextures = 'https://raw.githubusercontent.com/sentenza/double-cube-fe/gh-pages/assets/textures/rubik/';
     const material1 = new THREE.MeshPhongMaterial( { map: new THREE.TextureLoader().load(rubikTextures + 'face_1.jpg') } );
     const material2 = new THREE.MeshPhongMaterial( { map: new THREE.TextureLoader().load(rubikTextures + 'face_2.jpg') } );
     const material3 = new THREE.MeshPhongMaterial( { map: new THREE.TextureLoader().load(rubikTextures + 'face_3.jpg') } );
