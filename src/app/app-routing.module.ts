@@ -4,11 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { ThreeModelsComponent } from './threemodels/threemodels.component';
 import { SceneComponent } from './scene/scene.component';
 import { Scene } from 'three';
+import { CubeComponent } from './cube/cube.component';
 
 const appRoutes: Routes = [
     {path: '', redirectTo: '/', pathMatch: 'full'},
     {path: 'models', component: ThreeModelsComponent},
-    {path: 'scene', component: SceneComponent}
+    {path: 'scene', component: SceneComponent},
+    {path: 'cube', component: CubeComponent},
 ];
 
 @NgModule({
