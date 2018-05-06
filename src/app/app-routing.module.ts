@@ -7,7 +7,7 @@ import { Scene } from 'three';
 import { CubeComponent } from './cube/cube.component';
 
 const appRoutes: Routes = [
-    {path: '', redirectTo: '/', pathMatch: 'full'},
+    {path: '', redirectTo: '/cube', pathMatch: 'full'},
     {path: 'models', component: ThreeModelsComponent},
     {path: 'scene', component: SceneComponent},
     {path: 'cube', component: CubeComponent},
