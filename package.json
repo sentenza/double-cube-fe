@@ -1,5 +1,5 @@
 {
-  "name": "double-cube",
+  "name": "double-cube-fe",
   "version": "0.0.1",
   "license": "Apache 2.0",
   "scripts": {
@@ -24,7 +24,6 @@
     "@angular/platform-browser": "6.0.0",
     "@angular/platform-browser-dynamic": "6.0.0",
     "@angular/router": "6.0.0",
-    "@types/three": "^0.91.11",
     "bootstrap": "4.0.0",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
@@ -40,6 +39,7 @@
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~9.6.2",
+    "@types/three": "^0.91.11",
     "codelyzer": "~4.2.1",
     "jasmine-core": "~3.1.0",
     "jasmine-spec-reporter": "~4.2.1",
