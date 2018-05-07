@@ -20,9 +20,8 @@ export class SceneComponent implements OnInit, AfterViewInit {
     this.camera.position.z = 1000;
 
     const geometry = new THREE.BoxGeometry(500, 500, 500);
-    const material = new THREE.MeshBasicMaterial({color: 0xff0000, wireframe: true});
+    const material = new THREE.MeshBasicMaterial({color: 0xff0000, wireframe: false});
     this.mesh = new THREE.Mesh(geometry, material);
-
     this.scene.add(this.mesh);
   }
 
@@ -40,5 +39,4 @@ export class SceneComponent implements OnInit, AfterViewInit {
     this.mesh.rotation.y += 0.02;
     this.renderer.render(this.scene, this.camera);
   }
-
 }

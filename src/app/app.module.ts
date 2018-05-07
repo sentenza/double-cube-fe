@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { CubeComponent } from './cube/cube.component';
 import { HomeComponent } from './home/home.component';
+import { AdvancedComponent } from './advanced/advanced.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeComponent } from './home/home.component';
     SceneComponent,
     HeaderComponent,
     CubeComponent,
-    HomeComponent
+    HomeComponent,
+    AdvancedComponent
   ],
   imports: [
     BrowserModule,

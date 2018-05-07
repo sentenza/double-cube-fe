@@ -62,16 +62,6 @@ export class CubeComponent implements OnInit, AfterViewInit {
     this.scene.add(this.secondCubeMesh);
   }
 
-  createSceneOOOLD = function( geometry, materials, x, y, z, b ) {
-    const zmesh = new THREE.Mesh( geometry, new THREE.MeshFaceMaterial( materials ) );
-    zmesh.position.set( x, y, z );
-    zmesh.rotation.x += 0.7;
-    zmesh.scale.set( 1, 1, 1 );
-    zmesh.name = 'Logo';
-    const meshLogo = zmesh;
-    this.scene.add( zmesh );
-  };
-
   /**
    * Loads the materials to create the Rubik's cube faces
    * TODO: create a service for the Textures?

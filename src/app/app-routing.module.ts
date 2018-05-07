@@ -6,6 +6,7 @@ import { SceneComponent } from './scene/scene.component';
 import { Scene } from 'three';
 import { CubeComponent } from './cube/cube.component';
 import { HomeComponent } from './home/home.component';
+import { AdvancedComponent } from './advanced/advanced.component';
 
 const appRoutes: Routes = [
     {path: '', redirectTo: '/index', pathMatch: 'full'},
@@ -13,6 +14,7 @@ const appRoutes: Routes = [
     {path: 'models', component: ThreeModelsComponent},
     {path: 'scene', component: SceneComponent},
     {path: 'cube', component: CubeComponent},
+    {path: 'advanced', component: AdvancedComponent},
 ];
 
 @NgModule({
