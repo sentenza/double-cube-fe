@@ -49,7 +49,8 @@ export class AdvancedComponent implements OnInit, AfterViewInit {
   }
 
   private addMeshToScene(): void {
-    const meshPath = '../assets/meshes/json/cubecolours/cube_fvc.json';
+    // const meshPath = '../assets/meshes/json/cubecolours/cube_fvc.json';
+    const meshPath = 'https://raw.githubusercontent.com/sentenza/double-cube-fe/master/src/assets/meshes/json/cubecolours/cube_fvc.json';
     const loader = new THREE.JSONLoader();
     // Load Cube1
     loader.load(
