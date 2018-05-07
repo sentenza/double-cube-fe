@@ -8,19 +8,17 @@ import { Router, RouterEvent , NavigationEnd } from '@angular/router';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  isHomepage: boolean;
+  isHomepage = true;
   appTitle = 'Double Cube';
 
-  constructor(private router: Router) {
+  constructor(private router: Router) { }
 
+  ngOnInit() {
     this.router.events.subscribe((event: RouterEvent) => {
       if (event instanceof NavigationEnd) {
         const location = event.url;
-        this.isHomepage = location === '/' || location === '/home' ? true : false;
+        this.isHomepage = location === '/' || location === '/index' ? true : false;
       }
     });
-  }
-
-  ngOnInit() {
   }
 }
