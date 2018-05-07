@@ -8,6 +8,7 @@ import { SceneComponent } from './scene/scene.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { CubeComponent } from './cube/cube.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CubeComponent } from './cube/cube.component';
     ThreeModelsComponent,
     SceneComponent,
     HeaderComponent,
-    CubeComponent
+    CubeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
