@@ -38,9 +38,6 @@ export class LogoComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.createCamera();
     this.startRenderingLoop();
-    // this.canvas.appendChild(this.renderer.domElement);
-    this.renderer.domElement.style.display = 'block';
-    this.renderer.domElement.style.margin = 'auto';
     this.animateScene();
   }
 
@@ -76,7 +73,9 @@ export class LogoComponent implements OnInit, AfterViewInit {
   }
 
   /**
-   * Create a Three.scene and adds a camera to it
+   * Create a Three.scene and adds a camera to it.
+   * This should be called on AfterViewInit because it needs
+   * the aspectRatio of the canvas element.
    */
   private createCamera(): void {
     // Camera
@@ -91,10 +90,11 @@ export class LogoComponent implements OnInit, AfterViewInit {
   }
 
   private startRenderingLoop() {
-    // Renderer - Alpha: true for a transparent renderer (see the canvas color)
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, canvas: this.canvas });
     this.renderer.setPixelRatio(devicePixelRatio);
     this.renderer.setSize(this.canvas.clientWidth, this.canvas.clientHeight);
+    this.renderer.domElement.style.display = 'block';
+    this.renderer.domElement.style.margin = 'auto';
   }
 
   private getApectRatio(): number {
