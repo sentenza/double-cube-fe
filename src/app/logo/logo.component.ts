@@ -2,12 +2,12 @@ import { Component, OnInit, ViewChild, ElementRef, Input, AfterViewInit } from '
 import * as THREE from 'three';
 
 @Component({
-  selector: 'app-advanced',
-  templateUrl: './advanced.component.html',
-  styleUrls: ['./advanced.component.scss']
+  selector: 'app-logo',
+  templateUrl: './logo.component.html',
+  styleUrls: ['./logo.component.scss']
 })
-export class AdvancedComponent implements OnInit, AfterViewInit {
-  @ViewChild('advancedcanvas')
+export class LogoComponent implements OnInit, AfterViewInit {
+  @ViewChild('logocanvas')
   private canvasRef: ElementRef;
   private camera: THREE.PerspectiveCamera;
   private renderer: THREE.WebGLRenderer;

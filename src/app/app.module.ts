@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { RubikComponent } from './rubik/rubik.component';
 import { HomeComponent } from './home/home.component';
-import { AdvancedComponent } from './advanced/advanced.component';
+import { LogoComponent } from './logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { AdvancedComponent } from './advanced/advanced.component';
     HeaderComponent,
     RubikComponent,
     HomeComponent,
-    AdvancedComponent
+    LogoComponent
   ],
   imports: [
     BrowserModule,
