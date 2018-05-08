@@ -2,12 +2,12 @@ import { Component, OnInit, ViewChild, ElementRef, Input, AfterViewInit } from '
 import * as THREE from 'three';
 
 @Component({
-  selector: 'app-cube',
-  templateUrl: './cube.component.html',
-  styleUrls: ['./cube.component.scss']
+  selector: 'app-rubik',
+  templateUrl: './rubik.component.html',
+  styleUrls: ['./rubik.component.scss']
 })
-export class CubeComponent implements OnInit, AfterViewInit {
-  @ViewChild('cubecanvas')
+export class RubikComponent implements OnInit, AfterViewInit {
+  @ViewChild('rubikcanvas')
   private canvasRef: ElementRef;
   private camera: THREE.PerspectiveCamera;
   private renderer: THREE.WebGLRenderer;
