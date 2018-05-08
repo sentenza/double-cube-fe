@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { RubikComponent } from './rubik/rubik.component';
 import { HomeComponent } from './home/home.component';
 import { LogoComponent } from './logo/logo.component';
+import { InteractiveComponent } from './interactive/interactive.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LogoComponent } from './logo/logo.component';
     HeaderComponent,
     RubikComponent,
     HomeComponent,
-    LogoComponent
+    LogoComponent,
+    InteractiveComponent
   ],
   imports: [
     BrowserModule,
