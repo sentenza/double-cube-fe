@@ -17,8 +17,8 @@ export class InteractiveComponent implements OnInit, AfterViewInit {
   private scene: THREE.Scene;
   // Camera position
   private cameraX = 0;
-  private cameraY = 5;
-  private cameraZ = 20;
+  private cameraY = 10;
+  private cameraZ = 70;
   // Plane dimensions
   private planeDimensions = {width: 480, height: 480};
   // Meshes
@@ -26,7 +26,7 @@ export class InteractiveComponent implements OnInit, AfterViewInit {
   // Camera Properties
   @Input() fieldofview = 35; // View angle
   @Input() nearClippingPane = 1;
-  @Input() farClipingPane = 100;
+  @Input() farClipingPane = 1000;
   // Other properties
   @Input() rotationSpeedX = 0.005;
   @Input() rotationSpeedY = 0.002;
@@ -52,8 +52,6 @@ export class InteractiveComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.initCamera();
     this.addLights();
-    this.addPlane();
-    this.loadColladaModel();
     this.startRenderingLoop();
     this.animateScene();
   }
@@ -103,11 +101,11 @@ export class InteractiveComponent implements OnInit, AfterViewInit {
 
   /* Event listeners */
   public onAddPlaneClick(): void {
-    // this.addPlane();
+    this.addPlane();
   }
 
   public onLoadModelClick(): void {
-    // this.loadColladaModel();
+    console.warn('Not yet implemented!');
   }
 
   /* Component specific methods */
@@ -145,42 +143,27 @@ export class InteractiveComponent implements OnInit, AfterViewInit {
   }
 
   /**
-   * Loads a Collada (*.DAE) model using the ES6 three-full node module
+   * @see https://stackoverflow.com/a/37644913/1977778
    */
-  private loadColladaModel(): void {
-    let model: THREE.Scene;
-    const loader = new THREE.ColladaLoader();
-    loader.load( this.assetPath + 'meshes/collada/house/medieval_building.dae', ( collada ) => {
-      model = collada.scene;
-      model.scale.x = model.scale.y = model.scale.z = 2;
-      model.position.set(0, 1.5, -5);
-      model.rotateZ(Math.PI / 4);
-      model.updateMatrix();
-      if (this.applyShadowMap) { // TODO does not work
-        // model.children[0].children[0].castShadow = true;
-        // model.children[0].children[0].receiveShadow = false;
-      }
-      this.scene.add(model);
-    });
-  }
-
   private addLights(): void {
     const ambientLight = new THREE.AmbientLight(0x777777);
     this.scene.add(ambientLight);
     const spotLight = new THREE.SpotLight(0xffffff);
-    spotLight.intensity = 0.4;
-    spotLight.position.set(10, 40, 30);
-    if (this.applyShadowMap) {
-      spotLight.castShadow = true;
+    spotLight.intensity = 1;
+  //   if (this.applyShadowMap) {
+  //     spotLight.castShadow = true;
 
-      spotLight.shadowMapWidth = 512;
-      spotLight.shadowMapHeight = 512;
-
-
-      spotLight.shadowCameraNear = 5;
-      spotLight.shadowCameraFar = 20;
-      spotLight.shadowCameraFov = 60;
-    }
-    this.scene.add(spotLight);
+  //     spotLight.shadowMapWidth = 512;
+  //     spotLight.shadowMapHeight = 512;
+  //     spotLight.shadowCameraNear = 5;
+  //     spotLight.shadowCameraFar = 20;
+  //     spotLight.shadowCameraFov = 60;
+  //   }
+     this.scene.add(spotLight);
+     spotLight.position.set(-8, 10, 0);
+  //   // const helper = new THREE.CameraHelper( this.camera );
+  //   // this.scene.add( helper );
+     const spotLightHelper = new THREE.SpotLightHelper( spotLight, 0xFF0000 );
+     this.scene.add( spotLightHelper );
   }
 }
